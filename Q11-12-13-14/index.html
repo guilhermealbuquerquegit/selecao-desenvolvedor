@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frontend</title>
+    <style>
+      ul li:nth-child(4) {
+        color: orange;
+      }
+
+      ul li:nth-child(odd) {
+        color: red;
+      }
+
+      ul li:nth-child(even) {
+        font-weight: bold;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      li {
+        flex: 0 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="nav">
+      <li>Home</li>
+      <li>Quem Somos</li>
+      <li>Produtos</li>
+      <li>Onde Comprar</li>
+      <li>Contato</li>
+    </ul>
+  </body>
+  <script>
+    var element = document.getElementById('nav')
+
+    element.addEventListener('click', function (e) {
+      alert(e.target.firstChild.nodeValue)
+    })
+  </script>
+</html>
