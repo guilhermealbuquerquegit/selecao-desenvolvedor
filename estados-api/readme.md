@@ -45,30 +45,23 @@ npm run dev
 
         Resource URI > GET - http://localhost:4000/api/estados
 
-2.  Nesse mesmo serviço em Node.js, exponha uma API que retorne a população
-    de um determinado estado brasileiro :
+2.  Crie um serviço em Node.js que exponha uma API que retorne o estado pelo id
 
-        Resource URI > GET - http://localhost:4000/api/populacao/sp
+        Resource URI > GET - http://localhost:4000/api/estados/:id
 
 3.  Crie mais uma API que acesse o serviço de população e retornar junto ao
     resultado a população de cada estado.
 
-        Resource URI > GET - http://localhost:4000/api/estados
+        Resource URI > GET - http://localhost:4000/api/populacao
 
-4.  API que retorna o estado pelo UF
+4.  Nesse mesmo serviço em Node.js, exponha uma API que retorne a população
+    de um determinado estado brasileiro pelo id.
 
-        Resource URI > GET - http://localhost:4000/api/estados/ce
+        Resource URI > GET - http://localhost:4000/api/estados/:id/populacao
 
-5.  API que retorna o estado pelo UF
+5.  Nesse mesmo serviço em Node.js, exponha uma API que retorne a população
+    de um determinado estado brasileiro pela uf.
 
-        Resource URI > GET - http://localhost:4000/api/estados/ce
-
-## DevOps
-
-16. Indique a linha de comando (shell) para listar somente os processos node
-    rodando no server.
-
-17. Crie um arquivo docker-compose com um container node e outro container
-    mysql.
+        Resource URI > GET - http://localhost:4000/api/populacao/:uf
 
 Feito por Guilherme Albuquerquerque. 🤝 Entre em [contato](https://www.linkedin.com/in/guilherme-developer)

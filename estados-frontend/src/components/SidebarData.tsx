@@ -13,12 +13,6 @@ export const SidebarData = [
     icon: <FaIcons.FaSearch />,
     cName: 'nav-text',
   },
-  {
-    title: '/populacao/uf',
-    path: '/populacao/uf',
-    icon: <FaIcons.FaSearch />,
-    cName: 'nav-text',
-  },
 ]
 
 export default SidebarData

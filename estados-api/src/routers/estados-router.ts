@@ -19,10 +19,13 @@ estadosRouter.get('/estados/:id', (req, res) => {
   })
 })
 
-estadosRouter.get('/estados/:uf', (req, res) => {
-  const uf: string = req.params.uf
-  console.log(uf)
-  estadosRepository.lerEstado(uf, (estado) => {
+estadosRouter.get('/populacao', (req, res) => {
+  estadosRepository.lerPopulacaoTodos((estados) => res.json(estados))
+})
+
+estadosRouter.get('/estados/:id/populacao', (req, res) => {
+  const id: number = +req.params.id
+  estadosRepository.lerPopulacao(id, (estado) => {
     if (estado) {
       res.json(estado)
     } else {
@@ -31,13 +34,9 @@ estadosRouter.get('/estados/:uf', (req, res) => {
   })
 })
 
-estadosRouter.get('/populacao', (req, res) => {
-  estadosRepository.lerPopulacaoTodos((estados) => res.json(estados))
-})
-
 estadosRouter.get('/populacao/:uf', (req, res) => {
-  const uf: string = req.params.uf
-  estadosRepository.lerPopulacao(uf, (estado) => {
+  let uf: string = req.params.uf
+  estadosRepository.lerPopulacaoEstado(uf.toUpperCase(), (estado) => {
     if (estado) {
       res.json(estado)
     } else {
